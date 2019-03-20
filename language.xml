@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+<id>SychO:fabi</id>
+<version>1.0</version>
+
+<file name="$languagedir/Modifications.english.php">
+	<operation>
+		<search position="end"/>
+		<add><![CDATA[
+/* FA Board Icons by SychO */
+$txt['fabi_icon'] = 'FontAwesome Board Icon';
+$txt['fabi_color'] = 'Icon Color';
+$txt['fabi_help'] = 'All icons can be found here: <a href="https://fontawesome.com/icons"><b>https://fontawesome.com/icons</b></a><br>example: <span class="fabi_code">fas fa-<em>{icon_name}</em></span>';
+$txt['fabi_default_icon'] = 'Default FontAwesome board icon';
+$txt['fabi_default_color'] = 'Default FontAwesome board icon color';
+$txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Set to default</a> &bullet; <a id="fabi_color_picker">Color picker</a>';
+$txt['fabi_force_default_icon'] = 'Force default icon to be used';
+$txt['fabi_force_default_color'] = 'Force default color to be used';
+global $helptxt;
+$helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br><b>fas</b> stands for solid icons<br><b>fab</b> stands for brand icons (like facebook or twitter)<br><b>far</b> stands for regular icons';
+$helptxt['fabi_default_color'] = 'The default color is set in the CSS file fabi.css located in the default theme.';]]></add>
+	</operation>
+</file>
+
+</modification>

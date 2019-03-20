@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<name>FA Board Icons</name>
+	<id>SychO:fabi</id>
+	<type>modification</type>
+	<version>1.0</version>
+
+	<install for="2.1 - 2.1.99, 2.1 RC1">
+		<readme type="file" parsebbc="true">README.txt</readme>
+		<modification type="file">language.xml</modification>
+		<require-file name="FA-BoardIcons.php" destination="$sourcedir" />
+		<require-file name="FA-BoardIcons.template.php" destination="$themedir" />
+		<require-file name="fabi.css" destination="$themedir/css" />
+		<redirect url="$scripturl?action=admin;area=modsettings;sa=general" timeout="3000" type="inline">You will now be redirected to the default settings.</redirect>
+		<code>hooks.php</code>
+		<database>database.php</database>
+	</install>
+
+	<uninstall for="2.1 - 2.1.99, 2.1 RC1">
+		<modification type="file" reverse="true">language.xml</modification>
+		<remove-file name="$sourcedir/FA-BoardIcons.php" />
+		<remove-file name="$themedir/FA-BoardIcons.template.php" />
+		<remove-file name="$themedir/css/fabi.css" />
+		<code>hooks.php</code>
+	</uninstall>
+
+</package-info>
