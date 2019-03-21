@@ -123,7 +123,7 @@ function fabi_board_index($boardIndexOptions, &$categories)
 	}
 	else
 	{
-		foreach($this_category as $board_id => $board)
+		foreach($categories as $board_id => $board)
 		{
 			$request = $smcFunc['db_query']('', '
 				SELECT fabi_icon, fabi_color
@@ -134,11 +134,11 @@ function fabi_board_index($boardIndexOptions, &$categories)
 				)
 			);
 			$result = $smcFunc['db_fetch_assoc']($request);
-			$this_category[$board_id]['fabi_icon'] = $result['fabi_icon'];
-			$this_category[$board_id]['fabi_color'] = $result['fabi_color'];
+			$categories[$board_id]['fabi_icon'] = $result['fabi_icon'];
+			$categories[$board_id]['fabi_color'] = $result['fabi_color'];
 			$smcFunc['db_free_result']($request);
 			// Change the board type to 'fabi', this is to change the board icons without editing template files.
-			$this_category[$board_id]['type'] = 'fabi';
+			$categories[$board_id]['type'] = 'fabi';
 		}
 	}
 }
