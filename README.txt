@@ -7,6 +7,7 @@ A default icon and color can be specified under [b]Admin > Configuration > Modif
 
 [b][size=16px]Changelog[/size][/b]
 [list]
+	[li]Version 1.1[list][li]Fixes an error that prevents child boards from using icons.[/li][/list][/li]
 	[li]Version 1.0[list][li]Initial Release.[/li][/list][/li]
 [/list]
 

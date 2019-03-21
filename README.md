@@ -10,6 +10,8 @@ Each board has an icon & color fields
 A default icon and color can be specified under **Admin > Configuration > Modification Settings > Miscellaneous**
 
 ### Changelog
+* Version 1.1
+	- Fixes an error that prevents child boards from using icons.
 * Version 1.0
 	- Initial Release.
 

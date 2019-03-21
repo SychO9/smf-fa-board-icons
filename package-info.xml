@@ -4,7 +4,7 @@
 	<name>FA Board Icons</name>
 	<id>SychO:fabi</id>
 	<type>modification</type>
-	<version>1.0</version>
+	<version>1.1</version>
 
 	<install for="2.1 - 2.1.99, 2.1 RC1">
 		<readme type="file" parsebbc="true">README.txt</readme>
