@@ -156,7 +156,7 @@ function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdatePara
 		$boardUpdates[] = 'fabi_icon = {string:fabi_icon}';
 		$boardUpdateParameters['fabi_icon'] = $boardOptions['fabi_icon'];
 	}
-	if(!empty($boardOptions['fabi_icon']))
+	if(!empty($boardOptions['fabi_color']))
 	{
 		$boardUpdates[] = 'fabi_color = {string:fabi_color}';
 		$boardUpdateParameters['fabi_color'] = $boardOptions['fabi_color'];
