@@ -34,7 +34,9 @@ if (!defined('SMF'))
 function fabi_manage_board_ui()
 {
 	global $context, $smcFunc, $txt;
-
+	// Load the strings
+	loadLanguage('FA-BoardIcons');
+	// UI data
 	if ($_REQUEST['sa'] == 'newboard')
 	{
 		$context['board']['fabi_icon'] = '';
@@ -191,7 +193,8 @@ function fabi_fontawesome_css()
 function fabi_settings(&$config_vars)
 {
 	global $modSettings, $txt;
-
+	// Load the strings
+	loadLanguage('FA-BoardIcons');
 	// Adds a seperator if any settings are above
 	$fabi = empty($config_vars) ? array() : array('');
 
