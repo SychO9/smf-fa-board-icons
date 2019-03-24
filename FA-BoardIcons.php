@@ -101,48 +101,39 @@ function fabi_board_index($boardIndexOptions, &$categories)
 	global $smcFunc;
 	// load the icon template
 	loadTemplate('FA-BoardIcons');
-	// load the board icons
+
+	// An array of all board ids, id_board => id_category
 	if($boardIndexOptions['include_categories'])
-	{
 		foreach($categories as $cat_id => $category)
 			foreach($category['boards'] as $board_id => $board)
-			{
-				$request = $smcFunc['db_query']('', '
-					SELECT fabi_icon, fabi_color
-					FROM {db_prefix}boards
-					WHERE id_board = {int:board_id}',
-					array(
-						'board_id' => $board_id
-					)
-				);
-				$result = $smcFunc['db_fetch_assoc']($request);
-				$categories[$cat_id]['boards'][$board_id]['fabi_icon'] = $result['fabi_icon'];
-				$categories[$cat_id]['boards'][$board_id]['fabi_color'] = $result['fabi_color'];
-				$smcFunc['db_free_result']($request);
-				// Change the board type to 'fabi', this is to change the board icons without editing template files.
-				$categories[$cat_id]['boards'][$board_id]['type'] = 'fabi';
-			}
-	}
+				$board_ids[$board_id] = $cat_id;
+	// If we are on a board, than the keys in $categories are all board ids
 	else
 	{
-		foreach($categories as $board_id => $board)
-		{
-			$request = $smcFunc['db_query']('', '
-				SELECT fabi_icon, fabi_color
-				FROM {db_prefix}boards
-				WHERE id_board = {int:board_id}',
-				array(
-					'board_id' => $board_id
-				)
-			);
-			$result = $smcFunc['db_fetch_assoc']($request);
-			$categories[$board_id]['fabi_icon'] = $result['fabi_icon'];
-			$categories[$board_id]['fabi_color'] = $result['fabi_color'];
-			$smcFunc['db_free_result']($request);
-			// Change the board type to 'fabi', this is to change the board icons without editing template files.
-			$categories[$board_id]['type'] = 'fabi';
-		}
+		$board_ids = $categories;
+		$this_category = &$categories;
 	}
+
+	$request = $smcFunc['db_query']('', '
+		SELECT id_board, fabi_icon, fabi_color
+		FROM {db_prefix}boards
+		WHERE id_board IN ({array_int:board_ids})',
+		array(
+			'board_ids' => array_keys($board_ids)
+		)
+	);
+	while($row = $smcFunc['db_fetch_assoc']($request))
+	{
+		// If we are on the board index, the board is inside a category, so we need to determine where
+		if($boardIndexOptions['include_categories'])
+			$this_category = &$categories[$board_ids[$row['id_board']]]['boards'];
+
+		$this_category[$row['id_board']]['fabi_icon'] = !empty($row['fabi_icon']) ? $row['fabi_icon'] : '';
+		$this_category[$row['id_board']]['fabi_color'] = !empty($row['fabi_color']) ? $row['fabi_color'] : '';
+		// Change the board type to 'fabi', this is to change the board icons without editing template files.
+		$this_category[$row['id_board']]['type'] = 'fabi';
+	}
+	$smcFunc['db_free_result']($request);
 }
 
 /**
