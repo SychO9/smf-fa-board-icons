@@ -8,7 +8,7 @@
 
 	<install for="2.1 - 2.1.99, 2.1 RC1">
 		<readme type="file" parsebbc="true">README.txt</readme>
-		<redirect url="$scripturl?action=admin;area=modsettings;sa=general" timeout="3000" type="inline">You will now be redirected to the default settings.</redirect>
+		<redirect url="?action=admin;area=modsettings;sa=general" timeout="3000" type="inline">You will now be redirected to the default settings.</redirect>
 		<database>database.php</database>
 		<!-- files -->
 		<require-file name="FA-BoardIcons.php" destination="$sourcedir" />
