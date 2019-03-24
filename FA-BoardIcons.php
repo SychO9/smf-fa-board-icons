@@ -114,6 +114,10 @@ function fabi_board_index($boardIndexOptions, &$categories)
 		$this_category = &$categories;
 	}
 
+	// If there are no boards, than do nothing :)
+	if(empty($board_ids))
+		return;
+
 	$request = $smcFunc['db_query']('', '
 		SELECT id_board, fabi_icon, fabi_color
 		FROM {db_prefix}boards
