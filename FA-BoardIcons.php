@@ -2,7 +2,7 @@
 /**
  * @package FA Board Icons
  * @author Sami "SychO" Mazouz
- * @version 1.1
+ * @version 1.2
  * @license Copyright (c) 2019 Sami "SychO" Mazouz
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -225,5 +225,5 @@ function fabi_settings(&$config_vars)
 function fabi_credits()
 {
 	global $context;
-	$context['copyrights']['mods'][] = '<a href="https://github.com/SychO9/smf-fa-board-icons">FA Board Icons</a> by <a href="https://github.com/SychO9">SychO</a> &copy; 2019';
+	$context['copyrights']['mods'][] = '<a href="https://github.com/SychO9/smf-fa-board-icons">FA Board Icons v1.2</a> by <a href="https://github.com/SychO9">SychO</a> &copy; 2019 | Licensed under <a href="http://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="noopener">The MIT License (MIT)</a>';
 }

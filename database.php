@@ -2,7 +2,7 @@
 /**
  * @package FA Board Icons
  * @author Sami "SychO" Mazouz
- * @version 1.0
+ * @version 1.2
  * @license Copyright (c) 2019 Sami "SychO" Mazouz
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
