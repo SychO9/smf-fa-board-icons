@@ -39,7 +39,6 @@ $smcFunc['db_add_column']('{db_prefix}boards', array(
 	'size' => 255,
 	'null' => false,
 	'default' => '',
-	
 ), '', 'update');
 // Add the 'fabi_color' column to smf_boards table
 $smcFunc['db_add_column']('{db_prefix}boards', array(
@@ -48,7 +47,6 @@ $smcFunc['db_add_column']('{db_prefix}boards', array(
 	'size' => 16,
 	'null' => false,
 	'default' => '',
-	
 ), '', 'update');
 // Initialize some mod settings
 updateSettings(array('fabi_default_icon' => 'fas fa-comments'));
