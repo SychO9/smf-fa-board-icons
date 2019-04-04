@@ -29,7 +29,7 @@ if (!defined('SMF'))
 /**
  * Adds the icon & color fields to the edit/add screen
  * Called by:
- * 		integrate_edit_board
+ *		integrate_edit_board
  */
 function fabi_manage_board_ui()
 {
@@ -94,7 +94,7 @@ function fabi_manage_board_ui()
  * Loads the icons and colors of the boards from the database
  *
  * Called by:
- * 		integrate_getboardtree
+ *		integrate_getboardtree
  */
 function fabi_board_index($boardIndexOptions, &$categories)
 {
@@ -171,7 +171,7 @@ function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdatePara
  * Loads the FontAwesome library and a custom css file 'fabi.css'
  *
  * Called by:
- * 		integrate_pre_css_output
+ *		integrate_pre_css_output
  */
 function fabi_fontawesome_css()
 {
@@ -183,7 +183,7 @@ function fabi_fontawesome_css()
  * Adds some default settings
  *
  * Called by:
- * 		integrate_general_mod_settings
+ *		integrate_general_mod_settings
  */
 function fabi_settings(&$config_vars)
 {
@@ -215,10 +215,21 @@ function fabi_settings(&$config_vars)
 }
 
 /**
+ * Hints for admins
+ *
+ * Called by:
+ *		integrate_helpadmin
+ */
+function fabi_helpadmin()
+{
+	loadLanguage('FA-BoardIcons');
+}
+
+/**
  * Give credit to the author
  *
  * Called by:
- * 		integrate_credits
+ *		integrate_credits
  */
 function fabi_credits()
 {

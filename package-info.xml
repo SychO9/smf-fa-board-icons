@@ -21,6 +21,7 @@
 		<hook hook="integrate_modify_board" function="fabi_modify_board" file="$sourcedir/FA-BoardIcons.php" />
 		<hook hook="integrate_pre_css_output" function="fabi_fontawesome_css" file="$sourcedir/FA-BoardIcons.php" />
 		<hook hook="integrate_general_mod_settings" function="fabi_settings" file="$sourcedir/FA-BoardIcons.php" />
+		<hook hook="integrate_helpadmin" function="fabi_helpadmin" file="$sourcedir/FA-BoardIcons.php" />
 		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons.php" />
 	</install>
 
@@ -31,6 +32,7 @@
 		<hook hook="integrate_modify_board" function="fabi_modify_board" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
 		<hook hook="integrate_pre_css_output" function="fabi_fontawesome_css" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
 		<hook hook="integrate_general_mod_settings" function="fabi_settings" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_helpadmin" function="fabi_helpadmin" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
 		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
 		<!-- files -->
 		<remove-file name="$sourcedir/FA-BoardIcons.php" />
