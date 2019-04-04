@@ -11,6 +11,7 @@ A default icon and color can be specified under **Admin > Configuration > Modifi
 
 ### Changelog
 * Version 1.2
+	- Added Russian Translation by [Bugo](https://github.com/dragomano)
 	- Query optimization
 	- Fixed admin hints not working
 * Version 1.1
