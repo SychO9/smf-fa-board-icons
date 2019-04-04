@@ -33,7 +33,7 @@ if (!defined('SMF'))
  */
 function fabi_manage_board_ui()
 {
-	global $context, $smcFunc, $txt;
+	global $context, $smcFunc, $txt, $scripturl;
 	// Load the strings
 	loadLanguage('FA-BoardIcons');
 	// UI data
@@ -64,6 +64,7 @@ function fabi_manage_board_ui()
 	$context['custom_board_settings'] = array_merge(array(
 		array(
 			'dt' => '
+				<a id="setting_fabi_default_icon_help" href="' . $scripturl . '?action=helpadmin;help=fabi_board_icon" onclick="return reqOverlayDiv(this.href);"><span class="main_icons help"></span></a>
 				<strong>'.$txt['fabi_icon'].':</strong><br>
 				<span class="smalltext">'.$txt['fabi_help'].'</span><br>',
 			'dd' => '
@@ -144,7 +145,7 @@ function fabi_board_index($boardIndexOptions, &$categories)
  * Saves the icon & color values to the database
  *
  * Called by:
- * 		integrate_modify_board
+ *		integrate_modify_board
  */
 function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdateParameters)
 {

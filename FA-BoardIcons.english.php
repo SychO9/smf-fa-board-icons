@@ -23,6 +23,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+global $helptxt, $scripturl;
+
 $txt['fabi_icon'] = 'FontAwesome Board Icon';
 $txt['fabi_color'] = 'Icon Color';
 $txt['fabi_help'] = 'All icons can be found here: <a href="https://fontawesome.com/icons"><b>https://fontawesome.com/icons</b></a><br>example: <span class="fabi_code">fas fa-<em>{icon_name}</em></span>';
@@ -31,6 +33,8 @@ $txt['fabi_default_color'] = 'Default FontAwesome board icon color';
 $txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Set to default</a> &bullet; <a id="fabi_color_picker">Color picker</a>';
 $txt['fabi_force_default_icon'] = 'Force default icon to be used';
 $txt['fabi_force_default_color'] = 'Force default color to be used';
-global $helptxt;
+
 $helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br><b>fas</b> stands for solid icons<br><b>fab</b> stands for brand icons (like facebook or twitter)<br><b>far</b> stands for regular icons';
 $helptxt['fabi_default_color'] = 'The default color is set in the CSS file fabi.css located in the default theme.';
+$helptxt['fabi_board_icon'] = 'You can force use a single icon and color on all boards from <a href="'.$scripturl.'?action=admin;area=modsettings;sa=general">this page</a>';
+?>
