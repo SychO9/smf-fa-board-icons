@@ -6,7 +6,7 @@
 	<type>modification</type>
 	<version>1.2</version>
 
-	<install for="2.1 - 2.1.99, 2.1 RC2">
+	<install for="2.1 - 2.1.99, 2.1 RC2, 2.1 RC3">
 		<readme type="file" parsebbc="true">README.txt</readme>
 		<redirect url="?action=admin;area=modsettings;sa=general" timeout="3000" type="inline">You will now be redirected to the default settings.</redirect>
 		<database>database.php</database>
@@ -26,7 +26,7 @@
 		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons.php" />
 	</install>
 
-	<uninstall for="2.1 - 2.1.99, 2.1 RC2">
+	<uninstall for="2.1 - 2.1.99, 2.1 RC2, 2.1 RC3">
 		<!-- hooks -->
 		<hook hook="integrate_edit_board" function="fabi_manage_board_ui" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
 		<hook hook="integrate_getboardtree" function="fabi_board_index" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
