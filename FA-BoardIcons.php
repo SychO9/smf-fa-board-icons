@@ -176,7 +176,15 @@ function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdatePara
  */
 function fabi_fontawesome_css()
 {
-	loadCSSFile('https://use.fontawesome.com/releases/v5.7.2/css/all.css', array('external'=>true));
+	// FontAwesome Free v5.8.1 (https://fontawesome.com)
+	loadCSSFile('https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+		array(
+			'external'=>true,
+			'attributes' => array(
+				'integrity' => 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf',
+				'crossorigin' => 'anonymous'
+			)
+	));
 	loadCSSFile('fabi.css', array('force_current'=>false, 'minimize'=>true), 'smf_fabi');
 }
 
