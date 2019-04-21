@@ -10,6 +10,9 @@ Each board has an icon & color fields
 A default icon and color can be specified under **Admin > Configuration > Modification Settings > Miscellaneous**
 
 ### Changelog
+* Version 1.2.1
+	- Added Spanish Latin Translation by [Rock Lee](https://github.com/RockLee-BC)
+	- Added French Translation
 * Version 1.2
 	- Added Russian Translation by [Bugo](https://github.com/dragomano)
 	- Query optimization

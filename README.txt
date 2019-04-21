@@ -7,6 +7,7 @@ A default icon and color can be specified under [b]Admin > Configuration > Modif
 
 [b][size=16px]Changelog[/size][/b]
 [list]
+	[li]Version 1.2.1[list][li]Added Spanish Latin Translation Translation by [url=https://github.com/RockLee-BC]Rock Lee[/url][/li][li]Added French Translation[/li][/list][/li]
 	[li]Version 1.2[list][li]Added Russian Translation by [url=https://github.com/dragomano]Bugo[/url][/li][li]Query optimization[/li][li]Fixed admin hints not working[/li][/list][/li]
 	[li]Version 1.1[list][li]Fixes an error that prevents child boards from using icons.[/li][/list][/li]
 	[li]Version 1.0[list][li]Initial Release.[/li][/list][/li]
