@@ -27,6 +27,9 @@
 	padding: 2px 3px;
 	border-radius: 3px;
 }
+.fabi_icon.board_off.fabi_show_on {
+	opacity: 0.5;
+}
 #fabi_dynamic {
 	vertical-align: middle;
 	padding: 0 6px;

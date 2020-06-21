@@ -38,10 +38,13 @@ function template_bi_fabi_icon($board)
 	// Is there a color, and are we forcing a default color ?
 	$color = !empty($board['fabi_color']) && empty($modSettings['fabi_force_default_color']) ? $board['fabi_color'] : (!empty($modSettings['fabi_default_color']) ? $modSettings['fabi_default_color'] : '');
 
+	// Show a difference between new post icons and no new post icons
+	$show_on = !empty($modSettings['fabi_show_on']) ? ' fabi_show_on' : '';
+
 	echo '
 		<a
 			href="', ($context['user']['is_guest'] ? $board['href'] : $scripturl . '?action=unread;board=' . $board['id'] . '.0;children'), '"
-			class="board_', $board['board_class'], ' fabi_icon"', !empty($board['board_tooltip']) ? ' title="' . $board['board_tooltip'] . '"' : '', '
+			class="board_', $board['board_class'], ' fabi_icon', $show_on, '"', !empty($board['board_tooltip']) ? ' title="' . $board['board_tooltip'] . '"' : '', '
 		>
 			<i class="', $icon, '"', !empty($color) ? ' style="color:'.$color.'"' : '', '></i>
 		</a>';

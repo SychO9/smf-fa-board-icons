@@ -25,7 +25,9 @@
  *
  * Spanish translation https://www.bombercode.net Copyright 2014-2019
  */
+
 global $helptxt, $scripturl;
+
 $txt['fabi_icon'] = 'Icono de foro con FontAwesome';
 $txt['fabi_color'] = 'Icono de color';
 $txt['fabi_help'] = 'Todos los iconos se pueden encontrar aquí: <a href="https://fontawesome.com/icons"><b>https://fontawesome.com/icons</b></a><br>example: <span class="fabi_code">fas fa-<em>{icon_name}</em></span>';
@@ -34,7 +36,9 @@ $txt['fabi_default_color'] = 'Color predeterminado del icono del foro con FontAw
 $txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Establecer como predeterminado</a> &bullet; <a id="fabi_color_picker">Selector de color</a>';
 $txt['fabi_force_default_icon'] = 'Forzar el icono por defecto para ser utilizado';
 $txt['fabi_force_default_color'] = 'Forzar el color por defecto para ser usado';
+$txt['fabi_show_on'] = 'Show difference between new posts and no new posts in icon style';
+$txt['fabi_show_on_subtext'] = 'By default the style will be translucent for no new posts, and normal for new posts. You can edit the style in <b>Themes/default/css/fabi.css</b>';
+
 $helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br><b>fas</b> significa iconos sólidos<br><b>fab</b> significa iconos de marca (como Facebook o Twitter)<br><b>far</b> significa iconos regulares';
 $helptxt['fabi_default_color'] = 'El color predeterminado se establece en el archivo CSS fabi.css ubicado en el tema predeterminado.';
 $helptxt['fabi_board_icon'] = 'Puede forzar el uso de un solo icono y color en todos los foros desde <a href="'.$scripturl.'?action=admin;area=modsettings;sa=general">esta página</a>';
-?>

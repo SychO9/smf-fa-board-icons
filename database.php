@@ -48,6 +48,10 @@ $smcFunc['db_add_column']('{db_prefix}boards', array(
 	'null' => false,
 	'default' => '',
 ), '', 'update');
+
 // Initialize some mod settings
-updateSettings(array('fabi_default_icon' => 'fas fa-comments'));
-updateSettings(array('fabi_default_color' => ''));
+updateSettings(array(
+	'fabi_default_icon' => 'fas fa-comments',
+	'fabi_default_color' => '',
+	'fabi_show_on' => '1',
+));

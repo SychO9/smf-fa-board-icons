@@ -2,6 +2,7 @@
 ![Latest Version](https://img.shields.io/github/release/SychO9/smf-fa-board-icons.svg?style=flat-square)
 ![SMF2.1](https://img.shields.io/badge/SMF-2.1-blue.svg?style=flat-square&color=ed6033)
 ![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&color=green)
+
 FontAwesome icons for boards
 
 ## Settings

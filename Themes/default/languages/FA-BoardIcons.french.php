@@ -33,8 +33,9 @@ $txt['fabi_default_color'] = 'Couleur par défault';
 $txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Valeur par défault</a> &bullet; <a id="fabi_color_picker">Pipette à couleurs</a>';
 $txt['fabi_force_default_icon'] = 'Forcer l\'utilisation de l\'icône par défaut';
 $txt['fabi_force_default_color'] = 'Forcer l\'utilisation de la couleur par défaut';
+$txt['fabi_show_on'] = "Afficher la différence entre les nouveaux messages et aucun nouveau message dans le style d'icône";
+$txt['fabi_show_on_subtext'] = 'Par défaut, le style sera translucide pour aucun nouveau message et normal pour les nouveaux messages. Vous pouvez modifier le style dans <b>Themes/default/css/fabi.css</b>';
 
 $helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br><b>fas</b> représente les icônes solides<br><b>fab</b> représente les icônes de marque (tel que facebook ou twitter)<br><b>far</b> représente les icônes régulaires';
 $helptxt['fabi_default_color'] = 'La couleur par défault est définie dans le fichier fabi.css qui se trouve au niveau du dossier du thème par default.';
 $helptxt['fabi_board_icon'] = 'Vous pouvez forcer l’utilisation d’une seule icône et couleur sur toutes les séctions à partir de <a href="'.$scripturl.'?action=admin;area=modsettings;sa=general">cette page</a>';
-?>

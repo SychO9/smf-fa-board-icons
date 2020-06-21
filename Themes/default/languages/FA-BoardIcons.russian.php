@@ -10,6 +10,8 @@ $txt['fabi_default_color'] = 'Цвет иконки по умолчанию';
 $txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Задать вручную</a> &bullet; <a id="fabi_color_picker">Палитра</a>';
 $txt['fabi_force_default_icon'] = 'Использовать иконку по умолчанию';
 $txt['fabi_force_default_color'] = 'Использовать цвет по умолчанию';
+$txt['fabi_show_on'] = 'Show difference between new posts and no new posts in icon style';
+$txt['fabi_show_on_subtext'] = 'By default the style will be translucent for no new posts, and normal for new posts. You can edit the style in <b>Themes/default/css/fabi.css</b>';
 
 $helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br>Приставка <b>fas</b> используется для бесплатных иконок<br><b>fab</b> — для брендовых иконок (типа facebook или twitter)<br><b>far</b> — для обычных иконок, требующих подписку Font Awesome Pro.';
 $helptxt['fabi_default_color'] = 'Цвет по умолчанию устанавливается в CSS-файле fabi.css, расположенном в /Themes/default/css.';

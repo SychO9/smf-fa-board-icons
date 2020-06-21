@@ -218,11 +218,20 @@ function fabi_settings(&$config_vars)
 	// Adds a seperator if any settings are above
 	$fabi = empty($config_vars) ? array() : array('');
 
-	// Now the actual settings
+	// Default icon
 	$fabi[] = array('text', 'fabi_default_icon', 'postinput' => '<i id="fabi_dynamic" class="'.(!empty($modSettings['fabi_default_icon']) ? $modSettings['fabi_default_icon'] : '').'"></i>', 'javascript'=>'oninput="document.getElementById(\'fabi_dynamic\').className = this.value;"');
+
+	// Default color
 	$fabi[] = array(!empty($modSettings['fabi_default_color']) ? 'color' : 'text', 'fabi_default_color', 'subtext' => $txt['fabi_default_color_subtext']);
+
+	// Force using the default icon
 	$fabi[] = array('check', 'fabi_force_default_icon');
+
+	// Force using the default color
 	$fabi[] = array('check', 'fabi_force_default_color');
+
+	// Show difference between new posts and no new posts in icon style
+	$fabi[] = array('check', 'fabi_show_on', 'subtext' => $txt['fabi_show_on_subtext']);
 
 	// Add our setting to $config_vars
 	$first = array_slice($config_vars, 0);
