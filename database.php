@@ -53,5 +53,4 @@ $smcFunc['db_add_column']('{db_prefix}boards', array(
 updateSettings(array(
 	'fabi_default_icon' => 'fas fa-comments',
 	'fabi_default_color' => '',
-	'fabi_show_on' => '1',
 ));
