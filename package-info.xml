@@ -42,6 +42,7 @@
 		<remove-file name="$languagedir/FA-BoardIcons.russian.php" />
 		<remove-file name="$languagedir/FA-BoardIcons.french.php" />
 		<remove-file name="$languagedir/FA-BoardIcons.spanish_latin.php" />
+		<remove-file name="$languagedir/FA-BoardIcons.portuguese.php" />
 		<remove-file name="$themedir/css/fabi.css" />
 	</uninstall>
 

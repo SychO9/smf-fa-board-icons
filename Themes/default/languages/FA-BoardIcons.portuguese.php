@@ -22,21 +22,22 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
+ *
+ * Translation By Joomlamz (https://www.simplemachines.org/community/index.php?action=profile;u=79248)
  */
-
 global $helptxt, $scripturl;
 
-$txt['fabi_icon'] = 'FontAwesome Board Icon';
+$txt['fabi_icon'] = 'Ícone do Quadro de FontAwesome ';
 $txt['fabi_color'] = 'Icon Color';
-$txt['fabi_help'] = 'All icons can be found here: <a href="https://fontawesome.com/icons"><b>https://fontawesome.com/icons</b></a><br>example: <span class="fabi_code">fas fa-<em>{icon_name}</em></span>';
-$txt['fabi_default_icon'] = 'Default FontAwesome board icon';
-$txt['fabi_default_color'] = 'Default FontAwesome board icon color';
-$txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Set to default</a> &bullet; <a id="fabi_color_picker">Color picker</a>';
+$txt['fabi_help'] = 'Todos os ícones podem ser encontrados aqui: <a href="https://fontawesome.com/icons"><b>https://fontawesome.com/icons</b></a><br>exemplo: <span class="fabi_code">fas fa-<em>{icon_name}</em></span>';
+$txt['fabi_default_icon'] = 'Padrão FontAwesome ícone do quadro';
+$txt['fabi_default_color'] = 'Padrão FontAwesome cor do ícone do quadro';
+$txt['fabi_default_color_subtext'] = '<a id="fabi_default_color_set">Definido como padrão</a> &bullet; <a id="fabi_color_picker">Seletor de cores</a>';
 $txt['fabi_force_default_icon'] = 'Force default icon to be used';
-$txt['fabi_force_default_color'] = 'Force default color to be used';
+$txt['fabi_force_default_color'] = 'Forçar a cor padrão a ser usada';
 $txt['fabi_show_on'] = 'Show difference between new posts and no new posts in icon style';
 $txt['fabi_show_on_subtext'] = 'By default the style will be translucent for no new posts, and normal for new posts. You can edit the style in <b>Themes/default/css/fabi.css</b>';
 
-$helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br><b>fas</b> stands for solid icons<br><b>fab</b> stands for brand icons (like facebook or twitter)<br><b>far</b> stands for regular icons';
-$helptxt['fabi_default_color'] = 'The default color is set in the CSS file fabi.css located in the default theme.';
-$helptxt['fabi_board_icon'] = 'You can force use a single icon and color on all boards from <a href="'.$scripturl.'?action=admin;area=modsettings;sa=general">this page</a>';
+$helptxt['fabi_default_icon'] = $txt['fabi_help'] . '<br><b>fas</b> significa ícones sólidos<br><b>fab</b> significa ícones de marca (like facebook or twitter)<br><b>far</b> significa ícones regulares';
+$helptxt['fabi_default_color'] = 'A cor padrão é definida no ficheiro CSS fabi.css localizado no tema padrão.';
+$helptxt['fabi_board_icon'] = 'Você pode forçar o uso de um único ícone e cor em todos os quadros, <a href="'.$scripturl.'?action=admin;area=modsettings;sa=general">esta página</a>';
