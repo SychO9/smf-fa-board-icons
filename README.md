@@ -14,6 +14,7 @@ A default icon and color can be specified under **Admin > Configuration > Modifi
 * Version 1.3
 	- Added Portuguese Translation by [Joomlamz](https://www.simplemachines.org/community/index.php?action=profile;u=79248)
 	- Added opacity effect option on new/no new posts.
+	- Updated FontAwesome from 5.8.1 to 5.13.1
 * Version 1.2.1
 	- Added Spanish Latin Translation by [Rock Lee](https://github.com/RockLee-BC)
 	- Added French Translation
