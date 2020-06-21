@@ -31,4 +31,4 @@ A default icon and color can be specified under **Admin > Configuration > Modifi
 FA Board Icons is released under the MIT License. A full copy of this license is included in the package file.
 
 ## Copyrights
-[FontAwesome Icons](https://fontawesome.com/license/free) &copy; 2019
+[FontAwesome Icons](https://fontawesome.com/license/free) &copy; 2020
