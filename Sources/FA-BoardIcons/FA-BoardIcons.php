@@ -186,17 +186,20 @@ function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdatePara
  */
 function fabi_fontawesome_css()
 {
-	// FontAwesome Free v5.8.1 (https://fontawesome.com)
+	// FontAwesome Free v5.13.1 (https://fontawesome.com)
 	loadCSSFile('https://use.fontawesome.com/releases/v5.13.1/css/all.css',
 		array(
 			'external' => true,
 			'attributes' => array(
-				'integrity' => 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf',
+				'integrity' => 'sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q',
 				'crossorigin' => 'anonymous'
 			)
 	));
 
-	loadCSSFile('fabi.css', array('force_current'=>false, 'minimize'=>true), 'smf_fabi');
+	loadCSSFile('fabi.css', array(
+		'force_current' => false,
+		'minimize' => true
+	), 'smf_fabi');
 }
 
 /**
