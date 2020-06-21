@@ -11,6 +11,9 @@ Each board has an icon & color fields
 A default icon and color can be specified under **Admin > Configuration > Modification Settings > Miscellaneous**
 
 ## Changelog
+* Version 1.3
+	- Added Portuguese Translation by [Joomlamz](https://www.simplemachines.org/community/index.php?action=profile;u=79248)
+	- Added opacity effect option on new/no new posts.
 * Version 1.2.1
 	- Added Spanish Latin Translation by [Rock Lee](https://github.com/RockLee-BC)
 	- Added French Translation
