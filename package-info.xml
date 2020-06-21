@@ -4,41 +4,39 @@
 	<name>FA Board Icons</name>
 	<id>SychO:fabi</id>
 	<type>modification</type>
-	<version>1.2.1</version>
+	<version>1.3</version>
 
 	<install for="2.1 - 2.1.99, 2.1 RC2, 2.1 RC3">
 		<readme type="file" parsebbc="true">README.txt</readme>
 		<redirect url="?action=admin;area=modsettings;sa=general" timeout="3000" type="inline">You will now be redirected to the default settings.</redirect>
 		<database>database.php</database>
+
 		<!-- files -->
-		<require-file name="FA-BoardIcons.php" destination="$sourcedir" />
-		<require-file name="FA-BoardIcons.template.php" destination="$themedir" />
-		<require-file name="FA-BoardIcons.english.php" destination="$languagedir" />
-		<require-file name="FA-BoardIcons.russian.php" destination="$languagedir" />
-		<require-file name="FA-BoardIcons.spanish_latin.php" destination="$languagedir" />
-		<require-file name="FA-BoardIcons.french.php" destination="$languagedir" />
-		<require-file name="fabi.css" destination="$themedir/css" />
+		<require-dir name="Sources" destination="$boarddir" />
+		<require-dir name="Themes" destination="$boarddir" />
+
 		<!-- hooks -->
-		<hook hook="integrate_edit_board" function="fabi_manage_board_ui" file="$sourcedir/FA-BoardIcons.php" />
-		<hook hook="integrate_getboardtree" function="fabi_board_index" file="$sourcedir/FA-BoardIcons.php" />
-		<hook hook="integrate_modify_board" function="fabi_modify_board" file="$sourcedir/FA-BoardIcons.php" />
-		<hook hook="integrate_pre_css_output" function="fabi_fontawesome_css" file="$sourcedir/FA-BoardIcons.php" />
-		<hook hook="integrate_general_mod_settings" function="fabi_settings" file="$sourcedir/FA-BoardIcons.php" />
-		<hook hook="integrate_helpadmin" function="fabi_helpadmin" file="$sourcedir/FA-BoardIcons.php" />
-		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons.php" />
+		<hook hook="integrate_edit_board" function="fabi_manage_board_ui" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
+		<hook hook="integrate_getboardtree" function="fabi_board_index" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
+		<hook hook="integrate_modify_board" function="fabi_modify_board" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
+		<hook hook="integrate_pre_css_output" function="fabi_fontawesome_css" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
+		<hook hook="integrate_general_mod_settings" function="fabi_settings" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
+		<hook hook="integrate_helpadmin" function="fabi_helpadmin" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
+		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" />
 	</install>
 
 	<uninstall for="2.1 - 2.1.99, 2.1 RC2, 2.1 RC3">
 		<!-- hooks -->
-		<hook hook="integrate_edit_board" function="fabi_manage_board_ui" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
-		<hook hook="integrate_getboardtree" function="fabi_board_index" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
-		<hook hook="integrate_modify_board" function="fabi_modify_board" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
-		<hook hook="integrate_pre_css_output" function="fabi_fontawesome_css" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
-		<hook hook="integrate_general_mod_settings" function="fabi_settings" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
-		<hook hook="integrate_helpadmin" function="fabi_helpadmin" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
-		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_edit_board" function="fabi_manage_board_ui" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_getboardtree" function="fabi_board_index" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_modify_board" function="fabi_modify_board" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_pre_css_output" function="fabi_fontawesome_css" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_general_mod_settings" function="fabi_settings" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_helpadmin" function="fabi_helpadmin" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+		<hook hook="integrate_credits" function="fabi_credits" file="$sourcedir/FA-BoardIcons/FA-BoardIcons.php" reverse="true"/>
+
 		<!-- files -->
-		<remove-file name="$sourcedir/FA-BoardIcons.php" />
+		<remove-dir name="$sourcedir/FA-BoardIcons" />
 		<remove-file name="$themedir/FA-BoardIcons.template.php" />
 		<remove-file name="$languagedir/FA-BoardIcons.english.php" />
 		<remove-file name="$languagedir/FA-BoardIcons.russian.php" />

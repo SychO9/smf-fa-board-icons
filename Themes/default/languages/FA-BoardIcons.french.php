@@ -2,9 +2,9 @@
 /**
  * @package FA Board Icons
  * @author Sami "SychO" Mazouz
- * @version 1.2.1
- * @license Copyright (c) 2019 Sami "SychO" Mazouz
- * 
+ * @version 1.3
+ * @license Copyright (c) 2020 Sami "SychO" Mazouz
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights

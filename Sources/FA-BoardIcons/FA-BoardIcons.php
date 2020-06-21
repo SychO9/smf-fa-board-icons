@@ -2,9 +2,9 @@
 /**
  * @package FA Board Icons
  * @author Sami "SychO" Mazouz
- * @version 1.2
- * @license Copyright (c) 2019 Sami "SychO" Mazouz
- * 
+ * @version 1.3
+ * @license Copyright (c) 2020 Sami "SychO" Mazouz
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -23,6 +23,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
 if (!defined('SMF'))
 	die('No direct access...');
 
@@ -34,8 +35,10 @@ if (!defined('SMF'))
 function fabi_manage_board_ui()
 {
 	global $context, $smcFunc, $txt, $scripturl;
+
 	// Load the strings
 	loadLanguage('FA-BoardIcons');
+
 	// UI data
 	if ($_REQUEST['sa'] == 'newboard')
 	{
@@ -57,8 +60,8 @@ function fabi_manage_board_ui()
 		$context['board']['fabi_color'] = $result['fabi_color'];
 		$smcFunc['db_free_result']($request);
 	}
-	
-	if(empty($context['custom_board_settings']))
+
+	if (empty($context['custom_board_settings']))
 		$context['custom_board_settings'] = array();
 
 	$context['custom_board_settings'] = array_merge(array(
@@ -100,14 +103,19 @@ function fabi_manage_board_ui()
 function fabi_board_index($boardIndexOptions, &$categories)
 {
 	global $smcFunc;
+
 	// load the icon template
 	loadTemplate('FA-BoardIcons');
 
 	// An array of all board ids, id_board => id_category
-	if($boardIndexOptions['include_categories'])
-		foreach($categories as $cat_id => $category)
-			foreach($category['boards'] as $board_id => $board)
+	if ($boardIndexOptions['include_categories'])
+	{
+		foreach ($categories as $cat_id => $category)
+		{
+			foreach ($category['boards'] as $board_id => $board)
 				$board_ids[$board_id] = $cat_id;
+		}
+	}
 	// If we are on a board, than the keys in $categories are all board ids
 	else
 	{
@@ -116,7 +124,7 @@ function fabi_board_index($boardIndexOptions, &$categories)
 	}
 
 	// If there are no boards, than do nothing :)
-	if(empty($board_ids))
+	if (empty($board_ids))
 		return;
 
 	$request = $smcFunc['db_query']('', '
@@ -130,7 +138,7 @@ function fabi_board_index($boardIndexOptions, &$categories)
 	while($row = $smcFunc['db_fetch_assoc']($request))
 	{
 		// If we are on the board index, the board is inside a category, so we need to determine where
-		if($boardIndexOptions['include_categories'])
+		if ($boardIndexOptions['include_categories'])
 			$this_category = &$categories[$board_ids[$row['id_board']]]['boards'];
 
 		$this_category[$row['id_board']]['fabi_icon'] = !empty($row['fabi_icon']) ? $row['fabi_icon'] : '';
@@ -151,17 +159,19 @@ function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdatePara
 {
 	global $smcFunc;
 
-	if(empty($boardOptions['fabi_icon']))
+	if (empty($boardOptions['fabi_icon']))
 		$boardOptions['fabi_icon'] = !empty($_POST['fabi_icon']) ? $smcFunc['htmlspecialchars']($_POST['fabi_icon'], ENT_QUOTES) : '';
-	if(empty($boardOptions['fabi_color']))
+
+	if (empty($boardOptions['fabi_color']))
 		$boardOptions['fabi_color'] = !empty($_POST['fabi_color']) ? $smcFunc['htmlspecialchars']($_POST['fabi_color'], ENT_QUOTES) : '';
 
-	if(!empty($boardOptions['fabi_icon']))
+	if (!empty($boardOptions['fabi_icon']))
 	{
 		$boardUpdates[] = 'fabi_icon = {string:fabi_icon}';
 		$boardUpdateParameters['fabi_icon'] = $boardOptions['fabi_icon'];
 	}
-	if(!empty($boardOptions['fabi_color']))
+
+	if (!empty($boardOptions['fabi_color']))
 	{
 		$boardUpdates[] = 'fabi_color = {string:fabi_color}';
 		$boardUpdateParameters['fabi_color'] = $boardOptions['fabi_color'];
@@ -177,14 +187,15 @@ function fabi_modify_board($id, $boardOptions, &$boardUpdates, &$boardUpdatePara
 function fabi_fontawesome_css()
 {
 	// FontAwesome Free v5.8.1 (https://fontawesome.com)
-	loadCSSFile('https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+	loadCSSFile('https://use.fontawesome.com/releases/v5.13.1/css/all.css',
 		array(
-			'external'=>true,
+			'external' => true,
 			'attributes' => array(
 				'integrity' => 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf',
 				'crossorigin' => 'anonymous'
 			)
 	));
+
 	loadCSSFile('fabi.css', array('force_current'=>false, 'minimize'=>true), 'smf_fabi');
 }
 
@@ -197,8 +208,10 @@ function fabi_fontawesome_css()
 function fabi_settings(&$config_vars)
 {
 	global $modSettings, $txt;
+
 	// Load the strings
 	loadLanguage('FA-BoardIcons');
+
 	// Adds a seperator if any settings are above
 	$fabi = empty($config_vars) ? array() : array('');
 
@@ -207,10 +220,11 @@ function fabi_settings(&$config_vars)
 	$fabi[] = array(!empty($modSettings['fabi_default_color']) ? 'color' : 'text', 'fabi_default_color', 'subtext' => $txt['fabi_default_color_subtext']);
 	$fabi[] = array('check', 'fabi_force_default_icon');
 	$fabi[] = array('check', 'fabi_force_default_color');
+
 	// Add our setting to $config_vars
 	$first = array_slice($config_vars, 0);
 	$config_vars = array_merge($first, $fabi);
-	
+
 	addInlineJavaScript('
 		$(document).ready(function(){
 			$("#fabi_default_color_set").click(function() {
@@ -243,5 +257,6 @@ function fabi_helpadmin()
 function fabi_credits()
 {
 	global $context;
-	$context['copyrights']['mods'][] = '<a href="https://github.com/SychO9/smf-fa-board-icons">FA Board Icons v1.2</a> by <a href="https://github.com/SychO9">SychO</a> &copy; 2019 | Licensed under <a href="http://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="noopener">The MIT License (MIT)</a>';
+
+	$context['copyrights']['mods'][] = '<a href="https://github.com/SychO9/smf-fa-board-icons">FA Board Icons v1.3</a> by <a href="https://github.com/SychO9">SychO</a> &copy; 2020 | Licensed under <a href="http://en.wikipedia.org/wiki/MIT_License" target="_blank" rel="noopener">The MIT License (MIT)</a>';
 }

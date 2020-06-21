@@ -2,9 +2,9 @@
 /**
  * @package FA Board Icons
  * @author Sami "SychO" Mazouz
- * @version 1.2
- * @license Copyright (c) 2019 Sami "SychO" Mazouz
- * 
+ * @version 1.3
+ * @license Copyright (c) 2020 Sami "SychO" Mazouz
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -23,7 +23,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
- 
+
 /**
  * All board types were changed to 'fabi' and so we can edit the icons by creating
  * this new function.
@@ -31,13 +31,18 @@
 function template_bi_fabi_icon($board)
 {
 	global $context, $scripturl, $modSettings;
+
 	// Do we have an icon value, and are we forcing a default value ?
 	$icon = !empty($board['fabi_icon']) && empty($modSettings['fabi_force_default_icon']) ? $board['fabi_icon'] : (!empty($modSettings['fabi_default_icon']) ? $modSettings['fabi_default_icon'] : 'fas fa-comments');
+
 	// Is there a color, and are we forcing a default color ?
 	$color = !empty($board['fabi_color']) && empty($modSettings['fabi_force_default_color']) ? $board['fabi_color'] : (!empty($modSettings['fabi_default_color']) ? $modSettings['fabi_default_color'] : '');
 
 	echo '
-		<a href="', ($context['user']['is_guest'] ? $board['href'] : $scripturl . '?action=unread;board=' . $board['id'] . '.0;children'), '" class="board_', $board['board_class'], ' fabi_icon"', !empty($board['board_tooltip']) ? ' title="' . $board['board_tooltip'] . '"' : '', '>
+		<a
+			href="', ($context['user']['is_guest'] ? $board['href'] : $scripturl . '?action=unread;board=' . $board['id'] . '.0;children'), '"
+			class="board_', $board['board_class'], ' fabi_icon"', !empty($board['board_tooltip']) ? ' title="' . $board['board_tooltip'] . '"' : '', '
+		>
 			<i class="', $icon, '"', !empty($color) ? ' style="color:'.$color.'"' : '', '></i>
 		</a>';
 }
